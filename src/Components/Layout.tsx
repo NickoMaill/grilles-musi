@@ -1,0 +1,39 @@
+import { Box } from "@mui/material";
+import React from "react";
+import Footer from "./Footer";
+import Header from "./Header";
+
+// singleton --> start region ////////////////////////////////////
+// singleton --> end region //////////////////////////////////////
+
+export default function Layout({ children }: ILayout) {
+	// state --> start region ////////////////////////////////////
+	// state --> end region //////////////////////////////////////
+
+	// hooks --> start region ////////////////////////////////////
+	// hooks --> end region //////////////////////////////////////
+
+	// methods --> start region //////////////////////////////////
+	// methods --> end region ////////////////////////////////////
+
+	// useEffect --> start region ////////////////////////////////
+	// useEffect --> end region //////////////////////////////////
+
+	// render --> start region ///////////////////////////////////
+	return (
+		<>
+			<Header />
+			<Box component="main">
+                {children}
+            </Box>
+			<Footer />
+		</>
+	);
+	// render --> end region /////////////////////////////////////
+}
+
+// props interface --> start region //////////////////////////////
+interface ILayout {
+	children;
+}
+// props interface --> end region ////////////////////////////////
