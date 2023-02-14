@@ -2,6 +2,7 @@
   "name": "grille-musi",
   "version": "0.1.0",
   "private": true,
+
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@emotion/react": "^11.10.5",
@@ -156,5 +157,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }
