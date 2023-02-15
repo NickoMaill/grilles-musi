@@ -1,0 +1,117 @@
+.sectionScore {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.toolContainer {
+	margin: 1rem;
+}
+.buttonScore {
+	margin-inline: 1rem;
+}
+
+.scoreContainer {
+	padding: 2rem;
+	margin: 2rem;
+	width: 21cm;
+	height: 29.7cm;
+}
+
+.titleScoreContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid #686565 2px;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+.infoContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.scoreContentContainer {
+}
+
+.partContainer {
+	min-height: 10rem;
+	transition: 100ms;
+	padding: 0.5rem;
+	margin-block: 0.3rem;
+	border-radius: 0.5rem;
+	border: solid 2px;
+	&:hover {
+		border-color: var(--anthracite) !important;
+	}
+}
+
+.headerPartScoreContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.measuresContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.measure {
+	border: solid #000000 3px;
+	width: 11rem;
+	height: 6rem;
+}
+
+.measureDeleteButton {
+	position: relative;
+	bottom: 3rem;
+	right: -9.45rem;
+	background-color: #ffffff;
+    &:hover {
+        background-color: #ffffff;
+    }
+}
+
+.diagonale {
+    border-top: solid;
+    transform: rotate(332deg);
+    position: relative;
+    bottom: -2.7rem;
+    right: 0.9rem;
+    width: 12.3rem;
+}
+
+.diagonale2 {
+    border-top: solid;
+    transform: rotate(28deg);
+    position: relative;
+    bottom: -2.5rem;
+    right: 0.9rem;
+    width: 12.3rem;
+}
+
+@media print {
+	thead,
+	tfoot {
+		display: none !important;
+	}
+
+	.scoreContainer {
+		background-color: white;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		size: auto;
+		margin: 0;
+		padding: 15px;
+		font-size: 14px;
+		// line-height: 18px;
+	}
+}

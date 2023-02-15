@@ -1,26 +1,27 @@
-import { Autocomplete, Box, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
-import { chords } from "~/resources/chordsDictionnary";
-import Modal from "./Modal";
+import { ScoreType } from "~/types/contracts";
 import ScoreInit from "./ScoreInit";
-import ScoreInitForm from "./ScoreInitForm";
+import ScoreMainView from "./ScoreMainView";
 
 // singleton --> start region ////////////////////////////////////
 // singleton --> end region //////////////////////////////////////
 
 export default function MainView({}: IMainView) {
 	// state --> start region ////////////////////////////////////
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+    // const [isOpen, setIsOpen] = useState<boolean>(false);
     const [isScoreInit, setIsScoreInit] = useState<boolean>(false);
+	const [score, setScore] = useState<ScoreType | null>(null)
 	// state --> end region //////////////////////////////////////
     
 	// hooks --> start region ////////////////////////////////////
 	// hooks --> end region //////////////////////////////////////
     
 	// methods --> start region //////////////////////////////////
-    const handleClose = () => {
-      setIsOpen(!isOpen);
-      window.print();
+    const handleScore = (score: ScoreType) => {
+		if (score) {
+			setScore(score);
+			setIsScoreInit(true);
+		}
     }
 	// methods --> end region ////////////////////////////////////
 
@@ -31,9 +32,13 @@ export default function MainView({}: IMainView) {
 	if (!isScoreInit) {
 		return (
 			<>
-				<ScoreInit/>
+				<ScoreInit initScore={(score) => handleScore(score)}/>
 			</>
 		);
+	} else if (isScoreInit && score) {
+		return (
+			<ScoreMainView data={score}/>
+		)
 	} else {
 		return null
 	}

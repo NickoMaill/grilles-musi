@@ -2,13 +2,12 @@
   "name": "grille-musi",
   "version": "0.1.0",
   "private": true,
-
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.11.0",
+    "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.8",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",

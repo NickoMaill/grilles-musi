@@ -1,10 +1,10 @@
-import { Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { Typography } from '@mui/material'
+import React from 'react'
 
 // singleton --> start region ////////////////////////////////////
 // singleton --> end region //////////////////////////////////////
 
-export default function Header ({}: IHeader) {
+export default function AddMeasureScore ({}: IAddMeasurScore) {
     // state --> start region ////////////////////////////////////
     // state --> end region //////////////////////////////////////
 
@@ -18,14 +18,10 @@ export default function Header ({}: IHeader) {
     // useEffect --> end region //////////////////////////////////
 
     // render --> start region ///////////////////////////////////
-    return (
-        <Box component="header">
-            <Typography component="h1" variant='h1' className='header-title'>Grilles-Musi</Typography>
-        </Box>
-    );
+    return <Typography>Add Measure</Typography>
     // render --> end region /////////////////////////////////////
 }
 
 // props interface --> start region //////////////////////////////
-interface IHeader {}
+interface IAddMeasurScore {}
 // props interface --> end region ////////////////////////////////

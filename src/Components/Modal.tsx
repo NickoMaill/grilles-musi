@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider } from "@mui/material";
+import styles from "../Sass/commonStyles.module.scss";
 
 // singleton --> start region ////////////////////////////////////
 // singleton --> end region //////////////////////////////////////
@@ -19,10 +20,11 @@ export default function Modal({ isOpen, handleClose, title, contextText, childre
 
 	// render --> start region ///////////////////////////////////
 	return (
-		<Dialog open={isOpen} onClose={handleClose}>
-			<DialogTitle>{title}</DialogTitle>
-			<DialogContent>
-				<DialogContentText>{contextText}</DialogContentText>
+		<Dialog className={styles.dialogContainer} open={isOpen} onClose={handleClose}>
+			<DialogTitle sx={{ textAlign: 'center' }}>{title}</DialogTitle>
+			<DialogContent sx={{ width: "50rem" }}>
+				<DialogContentText sx={{ textAlign: 'center' }}>{contextText}</DialogContentText>
+				<Divider sx={{ marginBottom: '1rem' }}/>
 				{children}
 			</DialogContent>
 			<DialogActions>{actions}</DialogActions>
@@ -37,7 +39,7 @@ interface IModal {
 	children: ReactNode;
 	handleClose: () => void;
 	title: string;
-	contextText: string;
-	actions: ReactNode;
+	contextText?: string;
+	actions?: ReactNode;
 }
 // props interface --> end region ////////////////////////////////

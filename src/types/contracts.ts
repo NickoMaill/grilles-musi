@@ -5,60 +5,26 @@ export type ScoreType = {
 		bpm: number;
 		division: number;
 		subdivision: number;
-		tone:
-			| "Ab"
-			| "Abm"
-			| "A"
-			| "Am"
-			| "A#"
-			| "A#m"
-			| "Bb"
-			| "Bbm"
-			| "B"
-			| "Bm"
-			| "C"
-			| "Cm"
-			| "C#"
-			| "C#m"
-			| "Db"
-			| "Dbm"
-			| "D"
-			| "Dm"
-			| "D#"
-			| "D#m"
-			| "Eb"
-			| "Ebm"
-			| "E"
-			| "Em"
-			| "F"
-			| "Fm"
-			| "F#"
-			| "F#m"
-			| "Gb"
-			| "Gbm"
-			| "G"
-			| "Gm"
-			| "G#"
-			| "G#m";
-        };
-		score: ScoreDetail;
-        additionalText: string[];
+		tone: string;
+	};
+	score?: ScoreDetail[];
+	additionalText?: string[];
 };
 
-type ScoreDetail = [
-	// song
-	[
-		// part
-		[
-			// line
+export type ScoreDetail = {
+	partName: string;
+	content: 
 			{
 				// measure
-                chordSequence: { chordName: string }[]
-                isRepeatStart: boolean;
-                isRepeatEnd: boolean;
-                RepeatSequenceNumber: number;
-                isSilence: boolean
-            }
-		][]
-	][]
-];
+				chordSequence?: { chordName: string }[];
+				isRepeatStart?: boolean;
+				isRepeatEnd?: boolean;
+				RepeatSequenceNumber?: number;
+				isSilence?: boolean;
+			}[]
+};
+
+export enum ScoreUpdateEnum {
+	ADD_PART = 0,
+	ADD_MEASURE = 1,
+}

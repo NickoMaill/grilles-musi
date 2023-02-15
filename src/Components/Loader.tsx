@@ -1,10 +1,12 @@
-import { Typography } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 import { Box } from '@mui/system';
+import React from 'react'
+import styles from "../Sass/commonStyles.module.scss"
 
 // singleton --> start region ////////////////////////////////////
 // singleton --> end region //////////////////////////////////////
 
-export default function Header ({}: IHeader) {
+export default function Loader ({}: ILoader) {
     // state --> start region ////////////////////////////////////
     // state --> end region //////////////////////////////////////
 
@@ -19,13 +21,13 @@ export default function Header ({}: IHeader) {
 
     // render --> start region ///////////////////////////////////
     return (
-        <Box component="header">
-            <Typography component="h1" variant='h1' className='header-title'>Grilles-Musi</Typography>
+        <Box className={styles['loader-container']}>
+            <CircularProgress color='info' size={150}/>
         </Box>
     );
     // render --> end region /////////////////////////////////////
 }
 
 // props interface --> start region //////////////////////////////
-interface IHeader {}
+interface ILoader {}
 // props interface --> end region ////////////////////////////////

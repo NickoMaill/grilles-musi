@@ -1,0 +1,36 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid #bbbbbb 1px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input {
+    margin: 1rem;
+    width: 100%;
+}

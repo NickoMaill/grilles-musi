@@ -30,4 +30,5 @@ class StyleResources {
     }
 }
 
+// eslint-disable-next-line
 export default new StyleResources();
